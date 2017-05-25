@@ -24,7 +24,7 @@ $query = mysql_query("select * from login where password='$unique_id' AND userna
 $rows = mysql_num_rows($query);
 if ($rows == 1) {
 $_SESSION['login_user']=$username; // Initializing Session
-header("location: profile.php"); // Redirecting To Other Page
+header("location: index.php"); // Redirecting To Other Page
 } else {
 $error = "Username or ID is invalid";
 }

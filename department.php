@@ -71,17 +71,8 @@ $query="SELECT researchtopic,file_name,dept,username,description,date1 FROM uplo
 $s=array();
 $p=mysqli_query($conn, $query);
 if (mysqli_num_rows($p) > 0) {
-  //$l=<td><a href="http://yourlink">delete</a></td>;
-    // output data of each row
- //   echo "<table><tr><th>Research Topic</th><th>Department</th><th>Name</th></tr>";
   echo '<div id="amp">';
-    while($rows = mysqli_fetch_assoc($p)) {/*echo "<tr>";
-         echo "<td><a href=\"downtry.php?rname=" . . "\">".$rows["researchtopic"]."</a></td>";
-    echo "<td>". $rows["dept"] ."</td>";
-    echo "<td>". $rows["date1"] ."</td>";
-   // echo "<td>". $rows["id"] ."</td>";
-     //<?echo  $rows["researchtopic"];
-    echo "</tr>";*/
+    while($rows = mysqli_fetch_assoc($p)) {
     $a=$rows["researchtopic"];
  echo '<div class="center">
  <div class="a">
@@ -92,7 +83,7 @@ if (mysqli_num_rows($p) > 0) {
             <div class="animated bounce">
 
         <div class="card-title black-text text-darken-4" ><h4 style="text-align:left;">'.
-        $rows["researchtopic"].'</h4><h5 style="text-align:left;">By: '.$rows['username'].'</h5><p style="text-align:left;"  >'.substr($rows["description"],0,70).'......</p><a class="waves-effect waves-light btn m"  href="tryingnewwithcard.php?rname='.$a.'" style="align:right;"><i class="large material-icons right">play_arrow
+        $rows["researchtopic"].'</h4><h5 style="text-align:left;">By: '.$rows['username'].'</h5><p style="text-align:left;"  >'.substr($rows["description"],0,70).'......</p><a class="waves-effect waves-light btn m"  href="dedicatedpage.php?rname='.$a.'" style="align:right;"><i class="large material-icons right">play_arrow
 </i>View</a>
         </div>
         </div>
@@ -118,12 +109,8 @@ echo ' <div class="a">
     </div>
 </div>
     </div>
-    ';
-//printf("</div>");
-    
+    ';    
 }
-// Prints $r as array 
-//print_r ($r);
 
 ?>
  <div class='push'></div>
