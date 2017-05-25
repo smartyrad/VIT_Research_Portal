@@ -20,6 +20,21 @@
   background-color: #5E4751;
 }
 
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+}
 
 
 
@@ -31,6 +46,7 @@
 </head>
 
 <body>
+<div class='wrapper'>
 <?php
 require 'header.php';
 //Connecting to the sql server
@@ -107,7 +123,10 @@ echo ' <div class="a">
 //print_r ($r);
 
 ?>
-<?php require 'footee.php';?>
+ <div class='push'></div>
+</div>
+<div class='footer'><?php require 'footee.php';?></div>
+
 
 </body>
 
