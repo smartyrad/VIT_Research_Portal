@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>testingmic</title>
+  <title>Research info</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
   <style type="text/css">
     .ap{
         background-image: url('');
