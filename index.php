@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="shortcut icon" href="favicon.ico" type="image/png">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
 <style type="text/css">
     #b{
       color: #FFFFFF  ;

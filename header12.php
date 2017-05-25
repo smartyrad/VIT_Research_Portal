@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="favicon.ico" type="image/png">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
 
  <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

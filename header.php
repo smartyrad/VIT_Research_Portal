@@ -1,4 +1,3 @@
-
 <?php
     if(!isset($_SESSION)) 
     { 
@@ -12,7 +11,7 @@ error_reporting(0);
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="favicon.ico" type="image/png">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/png">
  <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
@@ -21,79 +20,6 @@ error_reporting(0);
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <style>
-/*
-ul {
-    list-style-type: none;
-    margin: -8px;
-    padding: 0;
-    overflow: hidden;
-    background-color: #0B132B;
-    top: 0;left: 0;
- 
-}
-
-li {
-    float: left;
-}
-
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 18px 24px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: #DAE2DF;color: black;
-}
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #DAE2DF;
-    min-width: 160px;
-    
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 14px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #6D696A;}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-#searchimage{
-  width:30px;height: 30px;border-radius: 5px;position: relative;top:0.8em;
-}
-.searchtext{
-  width: 35em;height: 2.5em;border-radius: 5px;background-color: rgb(255,255,255);border-style: none;padding-left: 1.4em;border-width: 0;margin-top: -6px;margin-left: 20px;
-
-}
-form{
-  margin: 0;padding:0;
-}
-.hea{
-  color: white;padding-left: 16em;padding-top:0;position: fixed;top: -14px;right: 0;
-}
-#a{
-display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 18px 24px;
-    text-decoration: none;
-    font-size-adjust: 2px;
-}*/
 #a{
   height: 2.1em;
   width: 2.1em;
@@ -117,8 +43,6 @@ body{
 }
 </style>
 <script type="text/javascript">
-
-
 var a=0; 
   function viewa(){
   var m=document.getElementById('as');
@@ -278,5 +202,5 @@ $(\'#searchid\').click(function(){
 ';
 $pre = 1;
 
-include("html.inc");
+include("config/html.inc");
 ?>
