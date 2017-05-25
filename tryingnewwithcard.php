@@ -1,7 +1,35 @@
+<?php
+require 'header.php';
+
+//Connecting to the sql server
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname= "research_portal";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+$rname=$_GET['rname'];
+
+$query="SELECT researchtopic,user_code,file_name,description,username,dept,date1 FROM upload_data WHERE researchtopic='".$rname."';";
+$s=array();
+$p=mysqli_query($conn, $query);
+//echo mysqli_num_rows($p);
+if (mysqli_num_rows($p) ==1) {
+  //$l=<td><a href="http://yourlink">delete</a></td>;
+    // output data of each row
+       $rows = mysqli_fetch_assoc($p);
+       $ab=$rows["researchtopic"];}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>testingmic</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
+  <title>Paper: <?php echo $rname; ?></title>
   <style type="text/css">
     .ap{
         background-image: url('');
@@ -54,53 +82,7 @@ html, body {
 </head>
 <body>
 <div class='wrapper'>
-<?php
-require 'header.php';
 
-//Connecting to the sql server
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname= "research_portal";
-/*//research id
-$user_id=$_GET['rid'];
-echo $user_id;*/
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-$rname=$_GET['rname'];
-
-$query="SELECT researchtopic,user_code,file_name,description,username,dept,date1 FROM upload_data WHERE researchtopic='".$rname."';";
-$s=array();
-$p=mysqli_query($conn, $query);
-//echo mysqli_num_rows($p);
-if (mysqli_num_rows($p) ==1) {
-  //$l=<td><a href="http://yourlink">delete</a></td>;
-    // output data of each row
-       $rows = mysqli_fetch_assoc($p);
-       $ab=$rows["researchtopic"];}/*
-         echo "<p>".$rows["researchtopic"]."</p>";
-         echo "<p><a href=\"downtry.php?rname=" . $rows["researchtopic"] . "\">".$rows["researchtopic"]."</a></p>";
-          echo "<p>".$rows["description"] ."</p>";
-    echo "<p>".$rows["dept"] ."</p>";
-    echo "<p>". $rows["date1"] ."</p>";
-   // echo "<td>". $rows["id"] ."</td>";
-    
-   
-}
- else {
-  //  printf("<div style="display:none">");
-    echo "0 results";
-//printf("</div>");
-    
-}
-// Prints $r as array 
-//print_r ($r);*/
-
-?>
 
 <div class="ap" >
 <div class="row center" style="margin-bottom:0;">

@@ -63,15 +63,15 @@ var a=0;
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
 
-  <li><a href="a1try.php?dep=CSE"><span class="color1">Computer Science</span></a></li>
+  <li><a href="department.php?dep=CSE"><span class="color1">Computer Science</span></a></li>
   <li class="divider"></li>
-  <li><a href="a1try.php?dep=EEE"><span class="color2">Electrical and Electronics</span></a></li>
+  <li><a href="department.php?dep=EEE"><span class="color2">Electrical and Electronics</span></a></li>
   <li class="divider"></li>
-  <li><a href="a1try.php?dep=ECE"><span class="color1">Electronics and Communication</span></a></li>
+  <li><a href="department.php?dep=ECE"><span class="color1">Electronics and Communication</span></a></li>
   <li class="divider"></li>
-  <li><a href="a1try.php?dep=MECH"><span class="color2">Mechanical Engineering</span></a></li>
+  <li><a href="department.php?dep=MECH"><span class="color2">Mechanical Engineering</span></a></li>
   <li class="divider"></li>
-  <li><a href="a1try.php?dep=CIVIL"><span class="color1">Civil Engineering</span></a></li>
+  <li><a href="department.php?dep=CIVIL"><span class="color1">Civil Engineering</span></a></li>
 
 </ul>
 
