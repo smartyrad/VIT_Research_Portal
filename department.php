@@ -97,7 +97,7 @@ echo '</div>';
 echo ' <div class="a">
     <div class="p">
 <div class="row">
-      <div class="col s12 m5">
+      <div class="col s12 m12">
         <div class="card-panel">
           <span class="black-text" style="width:100%;">NO DATA FOUND!!
           </span>

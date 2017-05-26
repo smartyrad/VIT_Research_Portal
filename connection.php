@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "kingjesus";
 $dbname= "research_portal";
 
 ?>
