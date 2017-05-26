@@ -30,7 +30,7 @@ header("location: signup.php?error=$error3"); // Redirecting To Other Page
 }
 
 }
-
+mysqli_close($conn); // Closing Connection
 ?>
 
 <!DOCTYPE html>

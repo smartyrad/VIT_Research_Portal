@@ -108,7 +108,7 @@ echo ' <div class="a">
     </div>
     ';    
 }
-
+mysqli_close($conn); // Closing Connection
 ?>
  <div class='push'></div>
 </div>

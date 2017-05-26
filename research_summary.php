@@ -77,7 +77,7 @@ if (mysqli_num_rows($p) ==1) {
     // output data of each row
        $rows = mysqli_fetch_assoc($p);
        $ab=$rows["researchtopic"];}
-
+mysqli_close($conn); // Closing Connection
 ?>
 
 <div class="ap" >

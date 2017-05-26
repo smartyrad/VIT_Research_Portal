@@ -79,4 +79,5 @@ function download_file( $fullPath )
     die('File Not Found');
 
 } 
+mysqli_close($conn); // Closing Connection
 ?>

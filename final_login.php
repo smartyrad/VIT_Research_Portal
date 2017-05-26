@@ -74,9 +74,9 @@ form {
           <label for="u_id">Password</label>
   </div>
 </div>
-<img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" class="capt" />
+<img id="captcha" src="/portal/securimage/securimage_show.php" alt="CAPTCHA Image" class="capt" />
 <div class="row">
-<a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false" class="as"><i class="material-icons prefix a md-light">restore</i></a>
+<a href="#" onclick="document.getElementById('captcha').src = '/portal/securimage/securimage_show.php?' + Math.random(); return false" class="as"><i class="material-icons prefix a md-light">restore</i></a>
  <div class="input-field col m12">
  		  <input id="captcha_code" name="captcha_code" type="text" class="validate tooltipped" size="10" maxlength="6" length="6" data-position="right" data-delay="50" data-tooltip="Enter Captcha!" required>
           <label for="captcha_code">Enter the characters</label>
@@ -94,6 +94,7 @@ form {
 <?php $error3 = !empty($_GET['error3'])?$_GET['error3']:"";?>
 <span><?php echo $error2; ?></span>
 <span><?php echo $error3;?></span>
+<span><?php echo $error4;?></span>
 </div>
 </form>
 </div>

@@ -59,6 +59,7 @@ else{
     
 }
 }
+mysqli_close($conn); // Closing Connection
 ?>
 
 <!DOCTYPE html>

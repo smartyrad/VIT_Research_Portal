@@ -26,5 +26,5 @@ if($_POST)
         <?php
     }
 }
-
+mysqli_close($connection); // Closing Connection
  ?>

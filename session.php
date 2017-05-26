@@ -14,4 +14,5 @@ mysqli_close($connection); // Closing Connection
 $error1="Please login to Upload your research";
 header("Location: final_login.php?error1=$error1");// Redirecting To Home Page
 }
+mysqli_close($connection); // Closing Connection
 ?>
