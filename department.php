@@ -53,10 +53,7 @@ html, body {
 <?php
 require 'header.php';
 //Connecting to the sql server
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname= "research_portal";
+require('connection.php');
 /*//research id
 $user_id=$_GET['rid'];
 echo $user_id;*/

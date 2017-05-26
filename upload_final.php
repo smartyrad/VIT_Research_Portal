@@ -1,12 +1,7 @@
 <?php
+require('connection.php');
 include('session.php');
 require('headerold.php');
-
-//include('session.php');
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname= "research_portal";
 
 
 // Create connection

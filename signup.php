@@ -3,10 +3,7 @@
 require('header12.php');
 
 //include('session.php');
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname= "research_portal";
+require('connection.php');
 $error3 = !empty($_GET['error3'])?$_GET['error3']:"";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);

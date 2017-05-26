@@ -70,7 +70,7 @@ form {
 <div class="row">
  <div class="input-field col m12">
  		  <i class="material-icons prefix">info</i>
-          <input id="u_id" name="u_id" type="text" class="validate tooltipped" data-position="right" data-delay="50" data-tooltip="Enter your Password!" required>
+          <input id="u_id" name="u_id" type="password" class="validate tooltipped" data-position="right" data-delay="50" data-tooltip="Enter your Password!" required>
           <label for="u_id">Password</label>
   </div>
 </div>

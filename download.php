@@ -1,12 +1,9 @@
 <?php
 
-//Use Mysql Query to find the 'full path' of file using $FileNo.
+//Use mysql Query to find the 'full path' of file using $FileNo.
 // I Assume $FilePaths as 'Full File Path'.
 //Connecting to the sql server
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname= "research_portal";
+require('connection.php');
 //research id
 $user_id=$_GET['rname'];
 echo $user_id;

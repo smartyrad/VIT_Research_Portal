@@ -2,10 +2,7 @@
 require 'header.php';
 
 //Connecting to the sql server
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname= "research_portal";
+require('connection.php');
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection

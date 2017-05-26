@@ -9,26 +9,26 @@ else
 {
 // Define $username and $password
 $unique_id=$_POST['u_id'];
-$username=$_POST['username'];
+$username1=$_POST['username'];
+require('connection.php');
 // Establishing Connection with Server by passing server_name, user_id and password as a parameter
-$connection = mysql_connect("localhost", "root", "");
-// To protect MySQL injection for Security purpose
+$connection = mysqli_connect($servername, $username,$password,$dbname);
+// To protect mysql injection for Security purpose
 $unique_id = stripslashes($unique_id);
-$username = stripslashes($username);
-$unique_id = mysql_real_escape_string($unique_id);
-$username = mysql_real_escape_string($username);
-// Selecting Database
-$db = mysql_select_db("research_portal", $connection);
+$username1 = stripslashes($username1);
+$unique_id = mysqli_real_escape_string($connection,$unique_id);
+$username1 = mysqli_real_escape_string($connection,$username1);
+
 // SQL query to fetch information of registerd users and finds user match.
-$query = mysql_query("select * from login where password='$unique_id' AND username='$username'", $connection);
-$rows = mysql_num_rows($query);
+$query = mysqli_query($connection,"select * from login where password='$unique_id' AND username='$username1'");
+$rows = mysqli_num_rows($query);
 if ($rows == 1) {
-$_SESSION['login_user']=$username; // Initializing Session
+$_SESSION['login_user']=$username1; // Initializing Session
 header("location: index.php"); // Redirecting To Other Page
 } else {
 $error = "Username or ID is invalid";
 }
-mysql_close($connection); // Closing Connection
+mysqli_close($connection); // Closing Connection
 }
 }
 ?>

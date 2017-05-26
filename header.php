@@ -81,18 +81,18 @@ var a=0;
     <a href="index.php" class="left brand-logo"><i></i>VIT RESEARCH</a>
         
     <ul class="right">
-   
+      
       <li><a href="index.php">Home</a></li>
       <!-- Dropdown Trigger -->
 
       <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Branch<i class="material-icons right">arrow_drop_down</i></a></li>
       <li><a href="upload_final.php">Upload</a></li>
-      <li><a onclick="viewa()" id="k"><i class="material-icons">search</i></a></li>
       <li><?php if(isset($_SESSION['login_user'])){ ?>
   <a class="link" href="logout.php" style="text-decoration:none">Logout</a>
 <?php }else{ ?>
   <a class="link" href="final_login.php" style="text-decoration:none">Login</a>
 <?php } ?></li>
+<li><a onclick="viewa()" id="k"><i class="material-icons">search</i></a></li>
          </ul>
 </div>
 </nav>
