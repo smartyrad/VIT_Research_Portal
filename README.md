@@ -13,6 +13,10 @@
 ## Supported Browsers:
 Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
+## DEMO SERVER
+
+[You may checkout the demo here](http://ec2-54-149-34-101.us-west-2.compute.amazonaws.com/portal/) 
+
 ## BUILD
 [Please read Build-Instructions.md for more information](Build-Instructions.md)
 
