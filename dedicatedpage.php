@@ -1,6 +1,5 @@
 <?php
 require 'header.php';
-
 //Connecting to the sql server
 require('connection.php');
 // Create connection
@@ -10,7 +9,6 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 $rname=$_GET['rname'];
-
 $query="SELECT researchtopic,user_code,file_name,description,username,dept,date1 FROM upload_data WHERE researchtopic='".$rname."';";
 $s=array();
 $p=mysqli_query($conn, $query);
@@ -31,7 +29,6 @@ mysqli_close($conn); // Closing Connection
     .ap{
         background-image: url('');
         background-size:100% 140%;margin:0;overflow:visible;
-
     }
     .author{
       float: left;
@@ -50,7 +47,6 @@ mysqli_close($conn); // Closing Connection
     }
     .m{
       margin-top: 0;
-
     }
     .a{
       padding-top: 0;
@@ -63,7 +59,7 @@ mysqli_close($conn); // Closing Connection
     margin: 0;
 }
 html, body {
-    height: 100%;
+    height: 100%;overflow-x:hidden;
 }
 .wrapper {
     min-height: 100%;
@@ -74,37 +70,27 @@ html, body {
 .footer, .push {
     height: 142px; /* .push must be the same height as .footer */
 }
-
   </style>
 </head>
 <body>
 <div class='wrapper'>
+<div class="row center">
+  <div class="col s12 m12 l12 ">
 
 
-<div class="ap" >
-<div class="row center" style="margin-bottom:0;">
-  <div class="col s12 m10 offset-m1 ">
-
-
-    <div class="card z-depth-3" style="margin-bottom:0;background-color:#3B1F2B">
-    <div>
-      <div class="card-title white-text text-darken-4" style="margin-bottom:0;background-color:#3B1F2B;"><h1 class="m" id="s"><?php echo $rows["researchtopic"];?></h1><p><span style="padding-bottom:100px;padding-left:30px;float:left;" >On :<?php echo '  '.$rows["date1"]?></span><span style="align:right;padding-left:750px;">By-<?php echo $rows["username"]?></span></p></div>
+    <div class="card z-depth-3" style="margin-bottom:0;background-color:#FFFFFF">
+   <div class="card-image">
+   <img style="height: 200px;" src="img/dedicated.png">
+      <span class="card-title white-text text-darken-4"><h4 class="m" id="s"><?php echo $rows["researchtopic"];?></h4><span style="float:left;padding-left:4%;" ><b>On :</b><?php echo '  '.$rows["date1"]?></span><span style="float:right;padding-left:6%"><b>By- </b><?php echo $rows["username"]?></span></span>
       </div>
+      <div class="card-content black-text" id="overfix" align="center">
+        <?php echo $rows["description"]?>
+        </div>
+
     </div>
   </div>
 </div>
 
-</div>
-<div class="row center" >
-  <div class="col s12 m10 offset-m1 a">
-    <div class="card z-depth-4 white" style="margin-top:-130px;">
-           <div class="container">
-    <div class="flow-text">  <p class="black-text" id="overfix" align="center"><?php echo $rows["description"]?><pre>
-
-    </pre></p></div></div>
-    </div>
-  </div>
-</div>
   <div class="fixed-action-btn horizontal">
     <a class="btn-floating btn-large " style="background-color:#3B1F2B;">
       <i class="large material-icons">mode_edit</i>
@@ -125,7 +111,4 @@ html, body {
   $('.fixed-action-btn.toolbar').openToolbar();
   $('.fixed-action-btn.toolbar').closeToolbar();</script>
 </html>
-
-
-
 

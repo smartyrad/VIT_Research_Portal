@@ -40,7 +40,7 @@ else{
         $query="INSERT into upload_data (USER_CODE,USERNAME,FILE_NAME,FILE_SIZE,FILE_TYPE,description,dept,date1,file_ext,researchtopic) VALUES('$login_session','$hello','$file_name','$file_size','$file_type','$description','$dept','$date12','$ext','$res_topic'); ";
          mysqli_query($conn, $query);
         $desired_dir="user_data";
-        
+        mysqli_close($conn); // Closing Connection
             if(is_dir($desired_dir)==false){
                 mkdir("$desired_dir", 0700);        // Create directory if it does not exist
             }
@@ -50,7 +50,7 @@ else{
                 $new_dir="user_data/".$file_name.time();
                  rename($file_tmp,$new_dir) ;               
             }
-            echo "<script>Materialize.toast('Succesfully Uploaded!', 8000) </script>";
+           echo "<script>Materialize.toast('Succesfully Uploaded!', 8000) </script>";
           }   
         else{
                 echo "<script>Materialize.toast($errors, 8000) </script>";
@@ -59,7 +59,7 @@ else{
     
 }
 }
-mysqli_close($conn); // Closing Connection
+
 ?>
 
 <!DOCTYPE html>
@@ -116,6 +116,21 @@ form {
     color: #3B1F2B; /* no need for !important :) */
 }
 
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+}
 
 </style>
 
@@ -128,8 +143,9 @@ form {
 </script>
 </head>
 <body>
+<div class='wrapper'>
 <h1 align="center">Upload Your Research here!</h1>
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
+<form class="container" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
 <div class="row">
  <div class="input-field col m12" >
           <i class="material-icons prefix">class</i>
@@ -179,6 +195,8 @@ form {
     
 
 </form>
-<?php require('footee.php'); ?>
+<div class='push'></div>
+</div>
+<div class='footer'><?php require 'footee.php';?></div>
 </body>
 </html>

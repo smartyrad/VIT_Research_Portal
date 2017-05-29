@@ -18,6 +18,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+<script>$( document ).ready(function(){
+    $(".button-collapse").sideNav();
+});</script>
 <style>
 #a{
   height: 2.1em;
@@ -36,6 +39,9 @@ body{
 }
 .color2{
   color: #3C1642;
+}
+i.iconcolor{
+color: #ffffff;
 }
 </style>
 </head>
@@ -61,8 +67,17 @@ body{
 <nav>
   <div class="nav-wrapper hello">
     <a href="index.php" class="left brand-logo"><i></i>VIT RESEARCH</a>
-        
-    <ul class="right">
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons iconcolor">menu</i></a> 
+    <ul class="right hide-on-med-and-down">
+   
+      <li><a href="index.php">Home</a></li>
+      <!-- Dropdown Trigger -->
+
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Branch<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a href="upload_final.php">Upload</a></li>
+      <li><a href="final_login.php">Login</a></li>
+   </ul>
+   <ul class="side-nav" id="mobile-demo">
    
       <li><a href="index.php">Home</a></li>
       <!-- Dropdown Trigger -->

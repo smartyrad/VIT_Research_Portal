@@ -72,7 +72,7 @@ if (mysqli_num_rows($p) > 0) {
     while($rows = mysqli_fetch_assoc($p)) {
     $a=$rows["researchtopic"];
  echo '<div class="center">
- <div class="a">
+ <div class="amod">
     <div class="p">
     <div class="card horizontal col m4 ">
       <div class="card-stacked">

@@ -21,7 +21,7 @@ if($_POST)
       
         ?>
             <div class="show" align="left">
-                <span class="name"><?php echo '<a href="research_summary.php?rname='.$final_username.'">'.$final_username.'</a>' ?></span>&nbsp;<br/><br/>
+                <span class="name"><?php echo '<a href="dedicatedpage.php?rname='.$final_username.'">'.$final_username.'</a>' ?></span>&nbsp;<br/><br/>
             </div>	
         <?php
     }

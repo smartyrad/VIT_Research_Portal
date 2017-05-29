@@ -8,6 +8,7 @@ header("location: index.php");
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Login Form</title>
 <style type="text/css">
 		.capt{
@@ -52,23 +53,39 @@ form {
      color: #3B1F2B;
    }
 
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+}
 </style>
 
 </head>
 <body>
+<div class='wrapper'>
 <div id="main">
 <div id="login">
 <h1 align="center">Login Credentials</h1>
-<form action="" method="post">
+<form action="" class="container" method="post">
 <div class="row">
- <div class="input-field col m12" >
+ <div class="input-field col m12 s12 l12" >
  		  <i class="material-icons prefix">account_circle</i>
           <input id="name" name="username" type="text" class="validate tooltipped" length="9" data-position="right" data-delay="50" data-tooltip="Enter your Username!" required="">
           <label for="name">Username</label>
  </div>
  </div>
 <div class="row">
- <div class="input-field col m12">
+ <div class="input-field col m12 s12 l12">
  		  <i class="material-icons prefix">info</i>
           <input id="u_id" name="u_id" type="password" class="validate tooltipped" data-position="right" data-delay="50" data-tooltip="Enter your Password!" required>
           <label for="u_id">Password</label>
@@ -77,7 +94,7 @@ form {
 <img id="captcha" src="/portal/securimage/securimage_show.php" alt="CAPTCHA Image" class="capt" />
 <div class="row">
 <a href="#" onclick="document.getElementById('captcha').src = '/portal/securimage/securimage_show.php?' + Math.random(); return false" class="as"><i class="material-icons prefix a md-light">restore</i></a>
- <div class="input-field col m12">
+ <div class="input-field col m12 s12 l12">
  		  <input id="captcha_code" name="captcha_code" type="text" class="validate tooltipped" size="10" maxlength="6" length="6" data-position="right" data-delay="50" data-tooltip="Enter Captcha!" required>
           <label for="captcha_code">Enter the characters</label>
   </div>
@@ -100,11 +117,13 @@ form {
 </div>
 </div>
 
-<?php require('footee.php'); ?>
 <script type="text/javascript">$(document).ready(function(){
     $('.tooltipped').tooltip({delay: 50});
   });
       </script>
+ <div class='push'></div>
+</div>
+<div class='footer'><?php require 'footee.php';?></div>
 </body>
 </html>
 
