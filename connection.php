@@ -1,3 +1,4 @@
+#Hactoberfest comment
 <?php
 
 $servername = "localhost";
