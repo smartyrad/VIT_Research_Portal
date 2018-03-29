@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![alt tag](https://raw.github.com/dogfalo/materialize/master/images/materialize.gif)
 ===========
 
@@ -23,3 +24,6 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
 ## Contributing
 [Please read CONTRIBUTING.md for more information](CONTRIBUTING.md)
+=======
+# VIT_Research_Portal
+>>>>>>> 3fdf22b1b1ddecf8bcc92212ea9fc31c0ef271a9
